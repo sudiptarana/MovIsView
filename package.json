@@ -22,7 +22,7 @@
     "angularfire2": "^5.2.1",
     "bootstrap3": "^3.3.5",
     "firebase": "^6.2.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-owl-carousel": "^2.0.7",
     "owl.carousel": "^2.3.4",
     "rxjs": "~6.4.0",
