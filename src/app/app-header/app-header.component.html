@@ -1,0 +1,39 @@
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+
+
+        <a class="navbar-brand"  [ngClass]="{'active':selectedTab=='home'}" style="color: rgb(238, 38, 38); font-size:25px;" href="javascript:void(0)" (click)="homeClicked()"><b>MovIsView</b></a>
+      </div>
+  
+     <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+
+          <ul class="nav navbar-nav">
+              <li class="dropdown"  [ngClass]="{'active':selectedTab=='movies'}">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><span style="padding-right:5px;color: rgb(226, 61, 75); " class="glyphicon glyphicon-film" ></span>Movie
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu" style="text-align:center; background-color:burlywood;">
+                  <li *ngFor="let item of langList" (click)="gotoMovie(item)">{{item.langName}}<a href="javascript:void(0)"></a></li>
+                </ul>
+              </li>
+            </ul>
+
+              <ul class="nav navbar-nav">
+                      <li  [ngClass]="{'active':selectedTab=='news'}" (click)="newsClicked()"><a href="javascript:void(0)" > <span style="padding-right:5px; color: rgb(226, 61, 75); " class="glyphicon glyphicon-list-alt"></span> News</a></li>
+                      <li  [ngClass]="{'active':selectedTab=='songs'}" (click)="songsClicked()"><a href="javascript:void(0)" > <span style="padding-right:5px; color: rgb(226, 61, 75);font-size:25px; ">&#9835;</span>  songs</a></li>
+                      <li  [ngClass]="{'active':selectedTab=='about'}" (click)="aboutClicked()"><a href="javascript:void(0)"><span style="padding-right:5px; color: rgb(226, 61, 75); " class="glyphicon glyphicon-earphone"></span>contact</a></li>
+                </ul>
+              
+        <li [ngClass]="{'active':selectedTab=='admin'}"><a href="javascript:void(0)" (click)="adminClicked()"><span style="padding-right:5px; color: rgb(226, 61, 75);" class="glyphicon glyphicon-user" (click)="adminClicked()" ></span> Admin</a></li>
+      </ul>
+      </div>
+    </div>
+  </nav>

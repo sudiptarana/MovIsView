@@ -1,0 +1,28 @@
+.picColor{
+    width:100%;
+    height:100%;
+    border:3px solid rgb(223, 57, 57);
+    padding: 2rem;
+}
+.picColor:hover
+{
+    background:linear-gradient(to bottom, #0099cc 9%, #00ff99 100%);
+    width:100%;
+    height:100%;
+   
+}
+
+.module-border-wrap:hover
+ {
+    max-width: 100%;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to bottom, #ff0000 19%, #ffcc66 100%);
+    padding: 3px;
+  }
+  
+  .module {
+    background: #222;
+    color: white;
+    padding: 2rem;
+  }

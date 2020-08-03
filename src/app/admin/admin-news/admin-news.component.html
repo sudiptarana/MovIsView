@@ -1,0 +1,48 @@
+<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 " style="text-align: center;">
+    <div class="form-group">
+      <br>  
+    <input type="text" class="form-control" placeholder="News Titel:" [(ngModel)]="newsTitel"/>
+    <br>
+
+    <div class="col-xs-6 col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+        <input type="text" name="name" class="form-control mb-30" placeholder= "News Catagory:" [(ngModel)]="catagory">
+      </div>
+    
+      <div class="col-xs-6 col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+        <input type="" name="Date" class="form-control mb-30" placeholder="Date & Time:"[(ngModel)]="DateTime" >
+        <br>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 wow fadeInUp" data-wow-delay="100ms">
+            <textarea name="massage" class="form-control mb-30" placeholder="News Details:" [(ngModel)]="newsDetails"></textarea>
+        </div>
+
+  <button type="button" class="btn btn-danger navbar-btn" (click)="creatlang()">Submit</button>
+</div>
+</div>
+
+
+<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 ">
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>NewsNo.</th>
+        <th>NewsTitel</th>
+        <th>Catagory</th>
+        <th>DateTime</th>
+        <th>newsDetails</th>
+      </tr>
+    </thead>
+    <tbody>  
+      <tr *ngFor= "let item of langList" class="warning">
+        <td >{{item.id}}</td>
+        <td>{{item.newsTitel}}</td>
+        <td>{{item.catagory}}</td>
+        <td>{{item.DateTime}}</td>
+        <td>{{item.newsDetails}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

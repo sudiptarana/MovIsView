@@ -1,0 +1,111 @@
+<marquee behavior="alternate" direction="left" style="background-color: rgb(15, 13, 13);">
+  <ul >
+      <div class="row">
+      <div class="row">
+      <div class="col-md-4 col-lg-12 col-sm-12 col-xs-12">
+      <img width="145" height="215" src="assets/2.jpg"/>
+      <img width="145" height="215" src="assets/3.jpg"/>
+      <img width="145" height="215" src="assets/4.jpg"/>
+      <img width="145" height="215" src="assets/5.jpg"/>
+      <img width="145" height="215" src="assets/6.jpg"/>
+      <img width="145" height="215" src="assets/7.jpg"/>
+      <img width="145" height="215" src="assets/8.jpg"/>
+      <img width="145" height="215" src="assets/9.jpg"/>
+      <img width="145" height="215" src="assets/10.jpg"/>
+      <img width="145" height="215" src="assets/11.jpg"/>
+      <img width="145" height="215" src="assets/12.jpg"/>
+      <img width="145" height="215" src="assets/13.jpg"/>
+      </div>
+      </div>
+      </div>
+  </ul>
+</marquee>
+
+
+    <div class="panel-heading" style="background-color: black;"><h2 style="color: rgb(236, 41, 41);"><b>Hindi Movies</b></h2></div>
+    <div class="panel-body" style="background-color: rgb(15, 13, 13);">
+      <div class="row">
+      <div class="row">
+          
+           <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" style=" background-color: black ; padding: 10px; margin-top: 10px;" *ngFor="let item of movieList">
+              <div class="row">
+                
+                  
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"> 
+              
+                <div class="module-border-wrap"> <div class="module"><div class="picColor">
+                <iframe width="100%" height="315" [src]="item.youtube" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <diV>
+               <span style="font-size: 20px; "><b class="text"> {{item.movieName}}</b></span>
+               <span style="padding: 2px ; font-size: 30px ; color: white; "><b>|</b></span>
+               <span style="font-size: 10px;color: white;"> {{item.rating}}</span>
+               <span style="padding: 2px ; font-size: 30px ;color: white;"><b>|</b></span>
+               <span style="font-size: 15px;color: white;"> {{item.langName}}</span>
+               <div  style="font-size: 15px;color: white;">Directed By-{{item.directorName}}</div>
+              </diV>
+              </div></div></div>
+              
+            </div>
+         
+          </div>
+        </div>
+     
+  </div>
+</div>
+</div>
+
+
+
+<div class="panel-heading" style="background-color: black;"><h2 style="color: rgb(236, 41, 41);"><b>Bengali Movies</b></h2></div>
+      <div class="panel-body" style="background-color: rgb(15, 13, 13);">
+        <div class="row">
+        <div class="row">
+            
+            <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" style="background-color: black ; padding: 10px; margin-top: 10px;" *ngFor="let item of bengList">
+                <div class="row">
+                    
+              <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+
+                  <div class="module-border-wrap"> <div class="module"><div class="picColor">
+
+                  <iframe width="100%" height="315" [src]="item.youtube" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              
+                 <span style="font-size: 20px; color: white; "><b class="text"> {{item.movieName}}</b></span>
+                 <span style="padding: 2px ; font-size: 30px ; color: white; "><b>|</b></span>
+                 <span style="font-size: 10px;color: white;"> {{item.rating}}</span>
+                 <span style="padding: 2px ; font-size: 30px ;color: white;"><b>|</b></span>
+                 <span style="font-size: 15px;color: white;"> {{item.langName}}</span>
+                 <div  style="font-size: 15px;color: white;">Directed By-{{item.directorName}}</div>
+                 </div></div></div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+ <div class="panel-heading" style="background-color: black;"><h2 style="color: rgb(236, 41, 41);"><b>Bengali Songs</b></h2></div>
+<div class="panel-body" style="background-color: rgb(15, 13, 13);">
+  <div class="row">
+  <div class="row">
+      
+      <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12" style=" background-color: black ; padding: 10px; margin-top: 10px;" *ngFor="let item of bsongs">
+          <div class="row">
+            
+              
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"> 
+          
+            <div class="module-border-wrap"> <div class="module"><div class="picColor">
+            <iframe width="100%" height="315" [src]="item.songsLink" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <diV>
+              <span style="font-size: 15px;color: white; "><b class="text"> {{item.songsTitel}}</b></span>
+              <div style="font-size: 10px;color: white;"> {{item.catagory}}</div>
+             </diV>
+          </div></div></div>
+        </div>
+     </div>
+  </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,60 @@
+<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 " style="text-align: center;">
+    <div class="form-group">
+      <br>  
+    <input type="text" class="form-control" placeholder="Movie's Language :" [(ngModel)]="langName"/>
+    <br>
+
+    <div class="col-xs-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+        <input type="text" name="name" class="form-control mb-30" placeholder= "Movie Name :" [(ngModel)]="movieName"/>
+      </div>
+    
+      <div class="col-xs-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+        <input type="text"  class="form-control mb-30" placeholder="Directed by :"[(ngModel)]="directorName" />
+        <br>
+        </div>
+
+        <div class="col-xs-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms" style="padding: 10px">
+            <input class="form-control mb-30" placeholder= "YouTube Trailer" [(ngModel)]="youtube"/>
+        </div>
+
+        <div class="col-xs-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms" style="padding: 10px"  >
+            <input type="text" name="name" class="form-control mb-30" placeholder= "Rating :" [(ngModel)]="rating"/>
+          </div>
+
+        <div class="col-12 wow fadeInUp" data-wow-delay="100ms"  >
+            <textarea name="massage" class="form-control mb-30" placeholder="Description :" [(ngModel)]="movieReview"></textarea>
+        </div>
+
+<button type="button" class="btn btn-danger navbar-btn" (click)="creatlang()">Submit</button>
+</div>
+</div>
+
+
+<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 ">
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>MovieId</th>
+        <th>Language</th>
+        <th>MovieName</th>
+        <th>DirectedBy</th>
+        <th>youtubeTrailer</th>
+        <th>Rating</th>
+        <th>Movie's Description</th>
+      </tr>
+    </thead>
+    <tbody>  
+      <tr *ngFor= "let item of langList" class="warning">
+        <td >{{item.id}}</td>
+        <td>{{item.langName}}</td>
+        <td>{{item.movieName}}</td>
+        <td>{{item.directorName}}</td>
+        <td>{{item.youtube}}</td>
+        <td>{{item.rating}}</td>
+        <td>{{item.movieReview}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

@@ -1,0 +1,35 @@
+<div style="border:1px solid red; padding: 10px ;text-align: center;">Hello his is test component
+</div><br><br>
+
+
+<span>TextBox1</span><input type="text" [(ngModel)]="textvalue"/>
+<span>TextBox2</span><input type="text" [(ngModel)]="textvalue" />
+
+<div>{{textvalue}}</div>
+
+<h1>to toggel a paragharp , click on toggle:</h1>
+<div style="border:1px solid blue; padding: 10px" *ngIf="isDivVisible">
+jcbdscbjdsbkjsnckjsnksnckjncknscdjkncdsjkcnkdsnckncks dcsdjknckjd dkdcndjknckjdncnd 
+</div>
+<button (click)="toggleClicked()">toggle</button>
+
+
+<h1 style="color:coral; align-content: center;">Showing a MoviesList</h1>
+<button (click)="showMovielist()">Movie list</button>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let item of movieList">
+            <td>{{item.id}}</td>
+            <td>{{item.movieName}}</td>
+        </tr>
+    </tbody>
+</table>
+
+

@@ -1,0 +1,33 @@
+
+<div class="panel-heading" style="background-color: black; align-self:auto; "><app-search [inputMovieList]="rawMovieList" (outputMovieList)="onFilterMovies($event)"></app-search> <br></div>
+    <div class="panel-body"  style="background-color: rgb(15, 13, 13);">
+        <div class="row">
+      <div class="row" >
+          
+          <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style=" background-color: black ; padding: 50px; margin-top: 10px;"*ngFor="let item of movieList">
+              
+            <div class="row">
+                  
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+
+                <div class="module-border-wrap"> <div class="module"><div class="picColor">
+
+                <iframe width="100%" height="550" [src]="item.youtube" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+                <div>
+                    <span style="font-size: 20px; "><b class="text"> {{item.movieName}}</b></span>
+                    <span style="padding: 2px ; font-size: 30px ; color: white; "><b>|</b></span>
+                    <span style="font-size: 10px;color: white;"> {{item.rating}}</span>
+                    <span style="padding: 2px ; font-size: 30px ;color: white;"><b>|</b></span>
+                    <span style="font-size: 15px;color: white;"> {{item.langName}}</span>
+                    <div  style="font-size: 15px;color: white;">Directed By-{{item.directorName}}</div>
+                    <div  style="font-size: 15px;color: white;"><b class="text">ReView - </b>{{item. movieReview}}</div>
+
+               </div></div></div></div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
